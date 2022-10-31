@@ -6,6 +6,7 @@
 package com.pws.uploadata;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  *
@@ -15,5 +16,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class DataController {
     
-    Requ
+    @RequestMapping("/")
+    public String register(){
+        return "info";
+    }
+    
+    @PostMapping("/save")
+    public String save(){
+        return "info-view";
+    }
 }
